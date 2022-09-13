@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/GotokHQ/BinancePaySDKIOS.git", :tag => s.version,  }
   s.vendored_frameworks = 'Frameworks/frameworks/BinancePaySDK.xcframework'
   s.ios.deployment_target = '10.0'
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
 
